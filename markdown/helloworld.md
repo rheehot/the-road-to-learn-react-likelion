@@ -110,16 +110,41 @@ id 의 값이 <strong>root</strong> 인 div 태그는 리액트 DOM이 렌더링
 다음으로, `src` 폴더를 살펴봅시다. 먼저 [index.js](src/index.js)는 앞서 살펴본 [index.html](public/index.html)에 리액트 DOM을 렌더링 시키는 코드입니다. 
 
 ~~~javascript
-ReactDOM.render(<h1>Hello, world!</h1>, document.getElementById('root'));
+const element = <h1>Hello, world!</h1>;
+ReactDOM.render(element, document.getElementById('root'));
 ~~~
 
-위의 코드는 h2 태그를 id 의 값이 <strong>root</strong> 인 태그에 렌더링 하라는 것입니다. 여기서 JavaScript 코드에 HTML 태그를 써도 되나 라는 의문이 들 수도 있습니다. 이것은 바로 페이스북에서 개발한 `JSX` 라는 JavaScript 확장 문법입니다. 아래의 코드를 살펴봅시다.
+위의 코드는 h2 태그를 id 의 값이 <strong>root</strong> 인 태그에 렌더링 하라는 것입니다. 여기서 JavaScript 코드에 HTML 태그를 써도 되나 라는 의문이 들 수도 있습니다. 이것은 바로 페이스북에서 개발한 `JSX` 라는 JavaScript 확장 문법입니다. JSX 문법에 따라, 여기서  h2 태그의 내용은 엘리먼트라고 불리는 리액트 앱의 가장 작은 단위가 됩니다. 위 코드를 실행하면 화면에 "Hello, world!"가 보일 겁니다. 
+
+리액트의 엘리먼트는 불변객체입니다. 엘리먼트를 생성한 이후에는 해당 엘리먼트의 자식이나 속성을 변경할 수 없습니다. 엘리먼트는 영화에서 하나의 프레임과 같이 특정 시점의 UI를 보여줍니다.
+
+지금까지 소개한 내용을 바탕으로 하면 UI를 업데이트하는 유일한 방법은 새로운 엘리먼트를 생성하고 이를 `ReactDOM.render()`로 전달하는 것입니다. 아래의 코드를 살펴봅시다.
+
+~~~javascript
+const tick = () => {
+  const element = (
+    <div>
+      <h1>Hello, world!</h1>
+      <h2>It is {new Date().toLocaleTimeString()}.</h2>
+    </div>
+  );
+  ReactDOM.render(element, document.getElementById('root'));
+}
+
+setInterval(tick, 1000);
+~~~
+
+위의 코드에서는 `setInterval()` 콜백을 이용해 초마다 `ReactDOM.render()`를 호출합니다. 리액트 DOM은 해당 엘리먼트와 그 자식 엘리먼트를 이전의 엘리먼트와 비교하고 DOM을 원하는 상태로 만드는데 필요한 경우에만 DOM을 업데이트합니다.
+
+<center><img src="./assets/images/tick.gif" alt="tick 예제 실행화면" width="20%"></center>
+
+매초 전체 UI를 다시 그리도록 엘리먼트를 만들었지만 React DOM은 내용이 변경된 텍스트 노드만 업데이트했습니다.
 
 ~~~javascript
 ReactDOM.render(<App />, document.getElementById('root'));
 ~~~
 
-위의 코드는 `<App />` 이라는 태그를 렌더링하라는 것이겠지요? 하지만 우리가 아는 HTML 태그 중에는 없는 태그입니다. 이러한 태그는 바로 <strong>컴포넌트</strong>라고 불리는 것 입니다. 컴포넌트에 대해서는 다음 교안에서 더 자세하게 다루어 보도록 하겠습니다.
+위의 코드는 `<App />` 이라는 태그를 렌더링하라는 것이겠지요? 하지만 우리가 아는 HTML 태그 중에는 없는 태그입니다. 또한 위에서 살펴본 앨리면트와는 다른 개념입니다. 이러한 것은 바로 <strong>컴포넌트</strong>라고 불리는 것 입니다. 컴포넌트에 대해서는 다음 교안에서 더 자세하게 다루어 보도록 하겠습니다.
 
 마지막으로, 남은 파일들을 살펴봅시다. 먼저 `.gitignore`는 Github에 올리지 않을 파일이나 폴더의 목록을 적는 파일입니다. create-react-app을 통해 생성된 리액트 프로젝트는 자동으로 gitignore 항목이 작성됩니다. `package.json` 과 `yarn.lock`은 각각 설치된 NPM 패키지 목록과 Yarn 패키지 목록이 작성됩니다. 이 파일들은 패키지 설치시 자동으로 업데이트 됩니다.
 
