@@ -109,7 +109,7 @@ id 의 값이 <strong>root</strong> 인 div 태그는 리액트 DOM이 렌더링
 
 다음으로, `src` 폴더를 살펴봅시다. 먼저 [index.js](src/index.js)는 앞서 살펴본 [index.html](public/index.html)에 리액트 DOM을 렌더링 시키는 코드입니다. 
 
-~~~javascript
+~~~jsx
 const element = <h1>Hello, world!</h1>;
 ReactDOM.render(element, document.getElementById('root'));
 ~~~
@@ -120,7 +120,7 @@ ReactDOM.render(element, document.getElementById('root'));
 
 지금까지 소개한 내용을 바탕으로 하면 UI를 업데이트하는 유일한 방법은 새로운 엘리먼트를 생성하고 이를 `ReactDOM.render()`로 전달하는 것입니다. 아래의 코드를 살펴봅시다.
 
-~~~javascript
+~~~jsx
 const tick = () => {
   const element = (
     <div>
@@ -140,7 +140,7 @@ setInterval(tick, 1000);
 
 매초 전체 UI를 다시 그리도록 엘리먼트를 만들었지만 React DOM은 내용이 변경된 텍스트 노드만 업데이트했습니다.
 
-~~~javascript
+~~~jsx
 ReactDOM.render(<App />, document.getElementById('root'));
 ~~~
 
