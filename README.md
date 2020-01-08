@@ -11,4 +11,5 @@
 ### 2. Contents
 ---
 
-- 첫번째 교안 : `Hello World` [바로가기](markdown/helloworld.md)
+- 첫 번째 교안 : `Hello World` [바로가기](markdown/helloworld.md)
+- 두 번째 교안 : `Components and Props` [바로가기](markdown/components-props.md)
