@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
+// import Welcome from "./components/Welcome";
 import * as serviceWorker from './serviceWorker';
 
 /* 
@@ -21,6 +21,11 @@ const tick = () => {
 };
 
 setInterval(tick, 1000);
+*/
+
+/*
+const element = <Welcome name="Lion" />;
+ReactDOM.render(element, document.getElementById("root"));
 */
 
 ReactDOM.render(<App />, document.getElementById('root'));
