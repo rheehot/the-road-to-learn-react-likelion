@@ -19,7 +19,7 @@ const Welcome = props => {
 
 이 함수는 데이터를 가진 하나의 "props" 객체 인자를 받은 후 리액트 엘리먼트를 반환하므로 유효한 리액트 컴포넌트입니다. 이러한 함수 구조를 가진 컴포넌트를 말 그대로 <strong>함수 컴포넌트</strong>라고 호칭합니다.
 
-컴포넌트는 ES6 문법의 `class`를 사용하여 정의할 수도 있습니다.
+컴포넌트는 ES6 문법의 `class`를 사용하여 정의할 수도 있습니다. 이러한 클래스형 구조를 가진 컴포넌트를 <strong>클래스 컴포넌트</strong>라고 호칭합니다.
 
 ~~~jsx
 class Welcome extends React.Components {
