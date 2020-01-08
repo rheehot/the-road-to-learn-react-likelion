@@ -22,9 +22,9 @@ const Welcome = props => {
 컴포넌트는 ES6 문법의 `class`를 사용하여 정의할 수도 있습니다. 이러한 클래스형 구조를 가진 컴포넌트를 <strong>클래스 컴포넌트</strong>라고 호칭합니다.
 
 ~~~jsx
-class Welcome extends React.Components {
+class Welcome extends React.Component {
   render() {
-    return return <h1>Hello, {this.props.name}</h1>;
+    return <h1>Hello, {this.props.name}</h1>;
   }
 }
 ~~~
