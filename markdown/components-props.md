@@ -121,6 +121,7 @@ const Comment = props => {
 위의 코드에서 className이 "Avatar"인 부분을 아래와 같이 추출하면 더욱 간결하게 코드를 작성할 수 있습니다.
 
 ~~~jsx
+// Avatar.js
 const Avatar = props => {
   return (
     <img className="Avatar"
@@ -130,6 +131,7 @@ const Avatar = props => {
   );
 }
 
+// Comment.js
 const Comment = props => {
   return (
     <div className="Comment">
