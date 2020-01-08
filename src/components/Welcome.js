@@ -5,9 +5,9 @@ const Welcome = props => {
 };
 
 /*
-class Welcome extends React.Components {
+class Welcome extends React.Component {
   render() {
-    return return <h1>Hello, {this.props.name}</h1>;
+    return <h1>Hello, {this.props.name}</h1>;
   }
 }
 */
