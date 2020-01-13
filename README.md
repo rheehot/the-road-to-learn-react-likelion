@@ -11,5 +11,5 @@
 ### 2. Contents
 ---
 
-- 첫 번째 교안 : `Hello World` [바로가기](markdown/helloworld.md)
-- 두 번째 교안 : `Components and Props` [바로가기](markdown/components-props.md)
+- 첫 번째 교안 : `Hello World` [바로가기](https://github.com/Jongwoo-Han/the-road-to-learn-react-likelion/wiki/Hello-World)
+- 두 번째 교안 : `Components and Props` [바로가기](https://github.com/Jongwoo-Han/the-road-to-learn-react-likelion/wiki/Components-와-Props)
