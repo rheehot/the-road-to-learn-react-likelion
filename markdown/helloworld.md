@@ -82,7 +82,7 @@ cd react-app
 yarn start
 ~~~
 
-<center><img src="./assets/images/proj_start.png" alt="프로젝트 초기 실행 화면" width="50%"></center>
+<p align="center"><img src="./assets/images/proj_start.png" alt="프로젝트 초기 실행 화면" width="50%"></p>
 
 실행을 하게 되면 [http://localhost:3000](http://localhost:3000) 에 create-react-app 초기 화면이 나타나게 됩니다. 이제 리액트를 시작할 준비를 다 마쳤습니다.
 
@@ -91,7 +91,7 @@ yarn start
 
 리액트 프로젝트 디렉토리 내부를 살펴봅시다. 다음은 `create-react-app` 을 통해 생성한 프로젝트 디렉토리의 모습입니다.
 
-<center><img src="./assets/images/folder.png" alt="프로젝트 초기 실행 화면" width="30%"></center>
+<p align="center"><img src="./assets/images/folder.png" alt="디렉토리 구조" width="30%"></p>
 
 먼저, `node_modules` 폴더에는 프로젝트에 필요한 Node.js 의 모듈이 설치됩니다.  새로운 모듈을 설치하고 싶을 때는 아래의 명령어를 실행하면 됩니다.
 
@@ -136,7 +136,7 @@ setInterval(tick, 1000);
 
 위의 코드에서는 `setInterval()` 콜백을 이용해 초마다 `ReactDOM.render()`를 호출합니다. 리액트 DOM은 해당 엘리먼트와 그 자식 엘리먼트를 이전의 엘리먼트와 비교하고 DOM을 원하는 상태로 만드는데 필요한 경우에만 DOM을 업데이트합니다.
 
-<center><img src="./assets/images/tick.gif" alt="tick 예제 실행화면" width="20%"></center>
+<p align="center"><img src="./assets/images/tick.gif" alt="tick 예제 실행화면" width="20%"></p>
 
 매초 전체 UI를 다시 그리도록 엘리먼트를 만들었지만 React DOM은 내용이 변경된 텍스트 노드만 업데이트했습니다.
 
